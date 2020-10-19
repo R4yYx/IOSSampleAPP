@@ -1,0 +1,7 @@
+{
+  "name": "IOSSampleAPP",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
