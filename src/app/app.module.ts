@@ -1,13 +1,14 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
-
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import {NgModule} from "@angular/core";
+import {AppComponent} from "./app.component";
+import {BrowserModule} from "@angular/platform-browser";
+import {IonicModule, IonicRouteStrategy} from "@ionic/angular";
+import {SplashScreen} from "@ionic-native/splash-screen/ngx";
+import {RouteReuseStrategy} from "@angular/router";
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import {Camera} from '@ionic-native/camera/ngx';
+import {WebView} from "@ionic-native/ionic-webview/ngx";
+import {FilePath} from "@ionic-native/file-path/ngx";
 
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,10 +16,12 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule
   ],
   providers: [
     StatusBar,
+    FilePath,
+    WebView,
+    Camera,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
